@@ -25,9 +25,9 @@ function viewCart() {
   let itemsAndPrices = [];
 
   for (let i=0; i<l; i++){
-    let itemsAndPrices = cart[i];
-    let item = Object.keys(itemsAndPrices)[0];
-    let price = itemsAndPrices[item];
+    let itemAndPrice = cart[i];
+    let item = Object.keys(itemAndPrice)[0];
+    let price = itemAndPrice[item];
 
     itemsAndPrices.push(`${item} at \$${price}`);
   }
