@@ -32,7 +32,17 @@ function viewCart() {
     itemsAndPrices.push(`${item} at \$${price}`);
   }
 
-  return `In your cart, you have`
+switch(itemsAndPrices.length){
+  case 1:
+  break;
+  case 2:
+  itemsAndPrices = itemsAndPrices.join(" and ");
+  break;
+  default:
+  itemsAndPrices[l-1] = "and ".concat(itemsAndPrices[l-1]);
+  itemsAndPrices = itemsAndPrices.join(", ");
+}
+  console.log(`In your cart, you have ${itemsAndPrices}.`);
 }
 
 function total() {
